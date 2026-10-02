@@ -44,4 +44,4 @@ class Lexer:
                 raise RuntimeError(f"Unexpected character: {value}")
             else:
                 tokens.append(Token(kind, value))
-        return tokens 
+        return tokens  
