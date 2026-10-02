@@ -1,1 +1,27 @@
 
+# main.py
+from lexer import Lexer
+
+def main():
+    # مسیری که فایل کد منبع در آن قرار دارد
+    source_file = "example.code"
+
+    # خواندن کد منبع از فایل
+    try:
+        with open(source_file, "r", encoding="utf-8") as f:
+            source_code = f.read()
+    except FileNotFoundError:
+        print(f"فایل {source_file} پیدا نشد.")
+        return
+
+    # ساخت یک نمونه از Lexer و انجام توکن‌سازی
+    lexer = Lexer(source_code)
+    tokens = lexer.tokenize()
+
+    # نمایش توکن‌ها
+    print("Tokens:")
+    for token in tokens:
+        print(token)
+
+if __name__ == "__main__":
+    main()
