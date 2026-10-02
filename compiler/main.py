@@ -1,4 +1,4 @@
-# lexer.py
+# main.py
 
 import re
 
