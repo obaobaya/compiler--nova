@@ -137,3 +137,4 @@ mod tests {
         assert_eq!(document.line_count(), 3);
     }
 }
+
